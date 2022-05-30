@@ -48,6 +48,13 @@ button{
     border-radius: 10px;
     box-shadow: 0 6px 20px rgb(0 0 0 / 0.2);
 }
+.container2{
+    margin-left: 650px;
+    margin-right: 650px;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgb(0 0 0 / 0.2);
+}
 .content{
     text-align: left;
     padding: 20px;

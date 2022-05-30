@@ -20,42 +20,42 @@
     <form>
       <br>
       <div class="">
-        <label class="form-label" for="f ">Nama Pengguna</label>
+        <label for="">Nama Pengguna</label>
         <br>
-        <input type="text" id="f " class="form-control form-control-lg" />
+        <input type="text" name="nama" />
       </div>
       
       <div class="">
-        <label class="form-label" for=" ">E-mail</label>
+        <label  for=" ">E-mail</label>
         <br>
-        <input type="email" id=" " class="form-control form-control-lg" />
+        <input type="email" name="email" />
       </div>
       
       <div class="">
-        <label class="form-label" for=" ">Sandi</label>
+        <label  for=" ">Sandi</label>
         <br>
-        <input type="password" id=" " class="form-control form-control-lg" />
+        <input type="password" name="password" />
       </div>
       
       <div class="">
-        <label class="form-label" for=" ">Konfirmasi Sandi</label>
+        <label  for=" ">Konfirmasi Sandi</label>
         <br>
-        <input type="password" id=" " class="form-control form-control-lg" />
+        <input type="password" name="sandi" />
       </div>
       
       <div class="">
-        <label class="form-label" for=" ">NIK / NPM</label>
+        <label  for=" ">NIK / NPM</label>
         <br>
-        <input type="number" id=" " class="form-control form-control-lg" minlength="10" />
+        <input type="number" name="nik" minlength="10" />
       </div>
       
       <div class="">
         <label for="peran">Peran</label>
         <br>
         <select id="peran" name="peran">
-          <option hidden>Pilih Peran</option>
-          <option value="dosen">Dosen</option>
-          <option value="mahasiswa">Mahasiswa</option>
+          <option selected hidden value="">Pilih Peran</option>
+          <option value="dosen" name="peran">Dosen</option>
+          <option value="mahasiswa" name="peran">Mahasiswa</option>
         </select>
       </div>
       
@@ -65,7 +65,7 @@
       
       <div class="">
         <button type="button"
-          style="display: block; margin: auto;">Daftar</button>
+          style="display: block; margin: auto; cursor: pointer;">Daftar</button>
       </div>
       
       <p class="">Sudah punya akun? <a href="#!"
