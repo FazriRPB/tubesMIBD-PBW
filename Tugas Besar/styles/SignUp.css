@@ -22,6 +22,7 @@ select{
     border: solid gray 1px;
     border-radius: 10px;
     margin-bottom: 80px;
+    box-shadow: 0 6px 20px rgb(0 0 0 / 0.2);
 }
 label{
     font-weight: bolder;
@@ -31,7 +32,7 @@ h1{
     margin-top: 20px;
 }
 button{
-    background-color: #1BA695;
+    background-color: #17D8B5;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -40,6 +41,7 @@ button{
     display: inline-block;
     font-size: 16px;
     border-radius: 10px;
+    box-shadow: 0 6px 20px rgb(0 0 0 / 0.2);
 }
 .container{
     margin-left: 650px;
@@ -61,6 +63,20 @@ button{
     background-color: white;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+}
+.content2{
+    text-align: center;
+    padding: 20px;
+    background-color: #1BA695;
+    border-radius: 10px;
+}
+.content2 select{
+    width: 40%;
+    padding: 15px;
+    display: inline-block;
+    border: solid gray 1px;
+    border-radius: 10px;
+    margin-bottom: 80px;
 }
 .header{
     display: block;

@@ -55,3 +55,6 @@ body{
 .logout{
     float: right;
 }
+p{
+    text-align: center;
+}
