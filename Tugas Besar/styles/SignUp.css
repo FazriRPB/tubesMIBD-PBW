@@ -1,0 +1,16 @@
+body{
+    text-align: center;
+}
+form{
+    text-align: left;
+    border: 1px solid;
+    margin-left: 700px;
+    margin-right: 700px;
+}
+input, select{
+    margin-left: 20px;
+}
+
+label{
+    font-weight: bolder;
+}
