@@ -4,73 +4,76 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="styles/loginstyles.css">
+  <title>Daftar Akun</title>
+  <link rel="stylesheet" href="styles/SignUp.css">
+  <script src="https://kit.fontawesome.com/fc52830bde.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  
-  
- <form>
-  <div class="header">
-    <h2 class="text-uppercase text-center mb-5">Daftar</h2>
+  <h3 style="margin-left:95%; color: white; font-weight: lighter;"> <u>Masuk</u> <i class="fa-solid fa-arrow-right-from-bracket"></i></h3>
+  <h1>LULUSSKIRPSI<br>BERSAMA
+  </h1>
+ <div class="container">
+    <div class="header">
+      <h2 class="">DAFTAR</h2>
+    </div>
+  <div class="content">
+    <form>
+      <br>
+      <div class="">
+        <label class="form-label" for="f ">Nama Pengguna</label>
+        <br>
+        <input type="text" id="f " class="form-control form-control-lg" />
+      </div>
+      
+      <div class="">
+        <label class="form-label" for=" ">E-mail</label>
+        <br>
+        <input type="email" id=" " class="form-control form-control-lg" />
+      </div>
+      
+      <div class="">
+        <label class="form-label" for=" ">Sandi</label>
+        <br>
+        <input type="password" id=" " class="form-control form-control-lg" />
+      </div>
+      
+      <div class="">
+        <label class="form-label" for=" ">Konfirmasi Sandi</label>
+        <br>
+        <input type="password" id=" " class="form-control form-control-lg" />
+      </div>
+      
+      <div class="">
+        <label class="form-label" for=" ">NIK / NPM</label>
+        <br>
+        <input type="number" id=" " class="form-control form-control-lg" minlength="10" />
+      </div>
+      
+      <div class="">
+        <label for="peran">Peran</label>
+        <br>
+        <select id="peran" name="peran">
+          <option hidden>Pilih Peran</option>
+          <option value="dosen">Dosen</option>
+          <option value="mahasiswa">Mahasiswa</option>
+        </select>
+      </div>
+      
+      
+      
+      
+      
+      <div class="">
+        <button type="button"
+          style="display: block; margin: auto;">Daftar</button>
+      </div>
+      
+      <p class="">Sudah punya akun? <a href="#!"
+          class=""><u>Klik di sini!</u></a></p>
+      
+    </form>
   </div>
-   <div class="form-outline mb-4">
-    <label class="form-label" for="f ">Nama Pengguna</label>
-    <br>
-     <input type="text" id="f " class="form-control form-control-lg" />
-   </div>
-  
-   <div class="form-outline mb-4">
-    <label class="form-label" for=" ">E-mail</label>
-    <br>
-     <input type="email" id=" " class="form-control form-control-lg" />
-   </div>
-  
-   <div class="form-outline mb-4">
-    <label class="form-label" for=" ">Sandi</label>
-    <br>
-     <input type="password" id=" " class="form-control form-control-lg" />
-   </div>
-  
-   <div class="form-outline mb-4">
-    <label class="form-label" for=" ">Konfirmasi sandi</label>
-    <br>
-     <input type="password" id=" " class="form-control form-control-lg" />
-   </div>
-  
-   <div class="form-outline mb-4">
-    <label class="form-label" for=" ">NIK / NPM</label>
-    <br>
-     <input type="number" id=" " class="form-control form-control-lg" />
-   </div>
-  
-   <div class="form-outline mb-4">
-     <label for="cars">Peran</label>
-     <br>
-     <select id="cars" name="cars">
-       <option value="volvo">Dosen</option>
-       <option value="saab">Mahasiswa</option>
-     </select>
-   </div>
-  
-   
-  
-   <div class="form-check d-flex justify-content-center mb-5">
-     <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg" />
-     <label class="form-check-label" for="form2Example3g">
-       I agree all statements in <a href="#!" class="text-body"><u>Terms of service</u></a>
-     </label>
-   </div>
-  
-   <div class="d-flex justify-content-center">
-     <button type="button"
-       class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
-   </div>
-  
-   <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="#!"
-       class="fw-bold text-body"><u>Login here</u></a></p>
-  
- </form>
+ </div>
   
 
 </body>
