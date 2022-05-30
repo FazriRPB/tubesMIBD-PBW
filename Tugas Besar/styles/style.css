@@ -16,26 +16,22 @@ body{
     'content1 content1 content1 notification';
 }
 .header1{
-    background-color: yellow;
-    border: solid 1px black;
+    background-color: white;
 
     height: 70px;
 }
 .header2{
-    background-color: pink;
-    border: solid 1px black;
+    background-color: #17D8B5;
 
     height: 40px;
 }
 .content1{
-    background-color: aqua;
-    border: solid 1px black;
+    background-color: white;
 
     height: 845px;
 }
 .notification{
     background-color: silver;
-    border: solid 1px black;
 }
 
 .topnav {
@@ -55,6 +51,27 @@ body{
 .logout{
     float: right;
 }
+.pp{
+    text-align: center;
+}
 p{
     text-align: center;
+}
+img{
+    width: 10%;
+}
+button{
+    background-color: white;
+    border: solid 1px;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+}
+a{
+    text-decoration: none;
+    color: white;
 }
