@@ -27,11 +27,14 @@ body{
 }
 .content1{
     background-color: white;
-
+    padding: 20px;
     height: 845px;
 }
 .notification{
-    background-color: silver;
+    background-color: white;
+    border-left: solid 1px;
+    padding: 10px;
+    padding-left: 20px;
 }
 
 .topnav {
