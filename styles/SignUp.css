@@ -66,6 +66,7 @@ a{
     background-color: white;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    padding: 1px 100px;
 }
 .content2{
     text-align: center;
@@ -83,7 +84,7 @@ a{
 }
 .header{
     display: block;
-    padding: 5px;
+    padding: 1px 100px;
     text-align: center;
     background-color: #1BA695;
     margin: 0;

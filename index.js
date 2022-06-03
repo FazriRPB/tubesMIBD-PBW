@@ -6,16 +6,26 @@ const port = 3000
 const fs = require('fs');
 const readline = require('readline');
 const http = require('http');
-
+app.use(express.static('styles'));
 // const rl = readline.createInterface({
 //     input: process.stdin,
 //     output: process.stdout,
+// });
+const mysql = require('mysql')
+// var con = mysql.createConnection({
+//   host: "localhost",
+//   user: "yourusername",
+//   password: "yourpassword"
+// });
+
+// con.connect(function(err) {
+//   if (err) throw err;
+//   console.log("Connected!");
 // });
 
 //menggunakan ejs
 app.set('view engine', 'ejs');
 // app.use(expresslayouts);
-
 app.get('/', (req, res) =>{
     res.render('login');
   });
