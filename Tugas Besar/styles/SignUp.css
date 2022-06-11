@@ -1,4 +1,97 @@
 body{
+    margin: 0;
+    background-color: #17D8B5;
+}
+.outcontainer{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    box-shadow: 0 6px 20px rgb(0 0 0 / 0.2);
+}
+.header{
+    text-align: center;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.input1{
+    display: flex;
+    flex-direction: column;
+}
+.header{
+    background-color: #1BA695;
+    height: 50px;
+    color: white;
+}
+.content2{
+    background-color: #1BA695;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+.content{
+    background-color: white;
+    padding: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+label{
+    font-weight: bolder;
+    margin-top: 5px;
+}
+input{
+    width: 87%;
+    border-radius: 6px;
+    border: solid gray 1px;
+    height: 30px;
+    margin-left: 20px;
+    margin-top: 3px;
+}
+#peran{
+    width: 40%;
+    border-radius: 6px;
+    border: solid gray 1px;
+    height: 30px;
+    margin-left: 20px;
+}
+#peran1{
+    width: 40%;
+    border-radius: 6px;
+    border: solid gray 1px;
+    height: 30px;
+    margin-bottom: 30px;
+}
+button{
+    margin-top: 10px;
+    margin-left: 140px;
+    margin-bottom: 20px;
+    background-color: #17D8B5;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    cursor: pointer;
+}
+h3{
+    float: right;
+}
+h1{
+    margin-left: 650px;
+}
+p{
+    text-decoration: none;
+}
+/* body{
     text-align: center;
     background-color: #17D8B5;
 }
@@ -47,15 +140,15 @@ a{
     text-decoration: none;
 }
 .container{
-    margin-left: 38%;
-    margin-right: 38%;
+    margin-left: 650px;
+    margin-right: 650px;
     height: 750px;
     border-radius: 10px;
     box-shadow: 0 6px 20px rgb(0 0 0 / 0.2);
 }
 .container2{
-    margin-left: 38%;
-    margin-right:38%;
+    margin-left: 650px;
+    margin-right: 650px;
     height: 250px;
     border-radius: 10px;
     box-shadow: 0 6px 20px rgb(0 0 0 / 0.2);
@@ -91,4 +184,4 @@ a{
     border-top-right-radius: 10px;
     height: 60px;
     color: white;
-}
+} */
