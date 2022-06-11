@@ -59,6 +59,32 @@ app.get('/dosen/ajukan', (req, res) =>{
     res.render('ajukan-d');
 });
 
+//nambah data dosen
+const addDosen = (conn, NIK, name , Email, Password) => {
+    return new Promise ((resolve, rejects) => {
+        conn.query(`INSERT INTO dosen (NIK, name, Email, Password) VALUES
+                    ('${NIK}', '${name}', '${Email}', '${Password}')` , (err, result) => {
+                        if (err)
+                        {
+                            rejects(err);
+                        }
+                        else
+                        {
+                            resolve(result);
+                        }
+                    })
+    });
+};
+
+app.post('/add', async (req, res) => {
+    const{NIK, name, Email, Password} = req.body;
+    console.log(req.body);
+    const conn = await dbConnect();
+    const user = await addDosen(conn, NIK, name, Email, Password);
+    conn.release();
+    res.redirect('pengguna');
+});
+
 //ambil data dosen
 const getDosen = conn => {
     return new Promise ((resolve, rejects) => {
@@ -76,11 +102,11 @@ const getDosen = conn => {
 }
 
 //halaman dosen
-app.get('/dataDosen', async(req, res) => {
+app.get('/kelola-akun', async(req, res) => {
     const conn = await dbConnect();
     var dosenData = await getDosen(conn);
     conn.release();
-    res.render('dataDosen', {
+    res.render('kelola-akun', {
         dosenData
     })
 })
