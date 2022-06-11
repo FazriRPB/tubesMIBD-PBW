@@ -1,17 +1,97 @@
-const express = require('express')
+import express from 'express'
+import mysql from 'mysql'
+import fs from 'fs'
+import readline from 'readline'
+import http from 'http'
+import path from 'path'
+// const fs = require('fs');
+// const readline = require('readline');
+// const http = require('http');
+
 const app = express()
 const port = 3000
 // const expresslayouts = require('express-ejs-layouts')
 
-const fs = require('fs');
-const readline = require('readline');
-const http = require('http');
+const pool = mysql.createPool({
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'skripsitopik',
+    connectionLimit: 10
+})
+
+//menggunakan ejs
+app.set('view engine', 'ejs');
 app.use(express.static('styles'));
+app.use(express.static(path.resolve('public')));
+
+const dbConnect = () => {
+    return new Promise ((resolve, rejects) => {
+        pool.getConnection((err, conn) => {
+            if(err)
+            {
+                rejects(err);
+            }
+            else
+            {
+                resolve(conn);
+            }
+        })
+    })
+}
+
+app.get('/', async (req, res) => {
+    const conn = await dbConnect();
+    conn.release();
+    res.render('login');
+})
+
+//halaman dosen
+app.get('/dosen/halaman-utama', (req, res) =>{
+    res.render('halaman-utama-d');
+});
+
+app.get('/dosen/review', (req, res) =>{
+    res.render('review');
+});
+
+app.get('/dosen/ajukan', (req, res) =>{
+    res.render('ajukan-d');
+});
+
+//ambil data dosen
+const getDosen = conn => {
+    return new Promise ((resolve, rejects) => {
+        conn.query(`SELECT * from dosen`, (err, result) => {
+            if (err)
+            {
+                rejects(err);
+            }
+            else
+            {
+                resolve(result);
+            }
+        })
+    })
+}
+
+//halaman dosen
+app.get('/dataDosen', async(req, res) => {
+    const conn = await dbConnect();
+    var dosenData = await getDosen(conn);
+    conn.release();
+    res.render('dataDosen', {
+        dosenData
+    })
+})
+    
+
+
 // const rl = readline.createInterface({
 //     input: process.stdin,
 //     output: process.stdout,
 // });
-const mysql = require('mysql')
+// const mysql = require('mysql')
 // var con = mysql.createConnection({
 //   host: "localhost",
 //   user: "yourusername",
@@ -23,8 +103,7 @@ const mysql = require('mysql')
 //   console.log("Connected!");
 // });
 
-//menggunakan ejs
-app.set('view engine', 'ejs');
+
 // app.use(expresslayouts);
 app.get('/', (req, res) =>{
     res.render('login');
@@ -39,18 +118,7 @@ app.get('/signup', (req, res) =>{
 });
 
 
-//halaman dosen
-app.get('/dosen/halaman-utama', (req, res) =>{
-    res.render('halaman-utama-d');
-});
 
-app.get('/dosen/review', (req, res) =>{
-    res.render('review');
-});
-
-app.get('/dosen/ajukan', (req, res) =>{
-    res.render('ajukan-d');
-});
 
 //halaman kaprodi
 // app.get('/kaprodi/home', (req, res) =>{
@@ -92,10 +160,10 @@ app.get('/profil', (req, res) => {
   res.send('Nama Dosen');
 });
 
-app.use('/', (req, res) => {
-  res.status(404);
-  res.send('404');
-});
+// app.use('/', (req, res) => {
+//   res.status(404);
+//   res.send('404');
+// });
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
