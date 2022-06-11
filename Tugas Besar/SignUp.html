@@ -9,69 +9,61 @@
   <script src="https://kit.fontawesome.com/fc52830bde.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <h3 style="margin-left:95%; color: white; font-weight: lighter;"> <a href="Login.html"><u>Masuk</u> <i class="fa-solid fa-arrow-right-from-bracket"></i></a></h3>
   <h1 style="color: white;"><i>LULUSSKIRPSI</i><br><i>BERSAMA</i>
   </h1>
- <div class="container">
-    <div class="header">
-      <h2 class="">D A F T A R</h2>
+ <div class="outcontainer">
+    <div class="container">
+      <div class="header">
+        <h2>D A F T A R</h2>
+      </div>
+    <div class="content">
+      <form>
+        <div class="input1">
+          <label for="">Nama Pengguna</label>
+          <input type="text" name="nama" />
+        
+        <div class="input1">
+          <label  for=" ">E-mail</label>
+          <input type="email" name="email" />
+        </div>
+        
+        <div class="input1">
+          <label  for=" ">Sandi</label>
+          <input type="password" name="password" />
+        </div>
+        
+        <div class="input1">
+          <label  for=" ">Konfirmasi Sandi</label>
+          <input type="password" name="sandi" />
+        </div>
+        
+        <div class="input1">
+          <label  for=" ">NIK / NPM</label>
+          <input type="number" name="nik" minlength="10" />
+        </div>
+        
+        <div class="input1">
+          <label for="peran">Peran</label>
+          <select id="peran" name="peran">
+            <option selected hidden value="">Pilih Peran</option>
+            <option value="dosen" name="peran">Dosen</option>
+            <option value="mahasiswa" name="peran">Mahasiswa</option>
+          </select>
+        </div>
+        
+        
+        
+        
+        
+        <div class="">
+          <button type="button">Daftar</button>
+        </div>
+        
+        <p class="">Sudah punya akun? <a href="Login.html"
+            class=""><u>Klik di sini!</u></a></p>
+        
+      </form>
     </div>
-  <div class="content">
-    <form>
-      <br>
-      <div class="">
-        <label for="">Nama Pengguna</label>
-        <br>
-        <input type="text" name="nama" />
-      </div>
-      
-      <div class="">
-        <label  for=" ">E-mail</label>
-        <br>
-        <input type="email" name="email" />
-      </div>
-      
-      <div class="">
-        <label  for=" ">Sandi</label>
-        <br>
-        <input type="password" name="password" />
-      </div>
-      
-      <div class="">
-        <label  for=" ">Konfirmasi Sandi</label>
-        <br>
-        <input type="password" name="sandi" />
-      </div>
-      
-      <div class="">
-        <label  for=" ">NIK / NPM</label>
-        <br>
-        <input type="number" name="nik" minlength="10" />
-      </div>
-      
-      <div class="">
-        <label for="peran">Peran</label>
-        <br>
-        <select id="peran" name="peran">
-          <option selected hidden value="">Pilih Peran</option>
-          <option value="dosen" name="peran">Dosen</option>
-          <option value="mahasiswa" name="peran">Mahasiswa</option>
-        </select>
-      </div>
-      
-      
-      
-      
-      
-      <div class="">
-        <button type="button"
-          style="display: block; margin: auto; cursor: pointer;">Daftar</button>
-      </div>
-      
-      <p class="">Sudah punya akun? <a href="Login.html"
-          class=""><u>Klik di sini!</u></a></p>
-      
-    </form>
   </div>
  </div>
   
